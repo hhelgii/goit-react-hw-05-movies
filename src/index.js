@@ -4,7 +4,7 @@ import { App } from 'components/App';
 import './index.css';
 import { BrowserRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='hhelgii.github.io'>
+  <BrowserRouter basename='/hhelgii.github.io'>
     <App />
   </BrowserRouter>
 );
