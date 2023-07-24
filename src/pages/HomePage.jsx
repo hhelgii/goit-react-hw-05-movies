@@ -3,14 +3,14 @@ import MovieList from "components/moviesList/MoviesList";
 import { getTrending } from "services/api";
 const HomePage=()=>{
     const [trendyMovies, setTrendyMovies]=useState([])
-    const [error,setError]=useState(null)
+   
     useEffect(()=>{
         const fetchTrends=async()=>{
             try {
                 const movies=await getTrending()
             setTrendyMovies(movies.results)
             } catch (error) {
-                setError(error.message)
+                console.log(error.message)
             }
         }
         fetchTrends()
