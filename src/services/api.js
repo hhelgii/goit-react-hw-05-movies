@@ -13,7 +13,7 @@ export async function getMovieInfo(id){
 }
 export async function getMovieInfoWithParams(id, param){
     const res=await axios.get(`${BASE_URL}/movie/${id}/${param}?api_key=${API_KEY}`)
-    console.log(res.data)
+    
     return res.data
     
 }

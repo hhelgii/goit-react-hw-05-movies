@@ -6,7 +6,7 @@ const Reviews = ({ movieId }) => {
   useEffect(() => {
     const fetReviews = async () => {
       const { results } = await getMovieInfoWithParams(movieId, 'reviews');
-      console.log(results)
+      
       setReviews(results)
     };
     fetReviews()
