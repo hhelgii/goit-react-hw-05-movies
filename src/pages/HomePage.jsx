@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MovieList from "components/moviesList/MoviesList";
 import { getTrending } from "services/api";
+import css from './homePage.module.css'
 const HomePage=()=>{
     const [trendyMovies, setTrendyMovies]=useState([])
    
@@ -17,10 +18,10 @@ const HomePage=()=>{
     }, [])
     // console.log(trendyMovies)
     return (
-        <>
-        <h1>Trendy Movies</h1>
+        <div className={css.homePage}>
+        <h1 className={css.title}>Trendy Movies</h1>
         {trendyMovies&&<MovieList movies={trendyMovies}/>}
-        </>
+        </div>
     )
 }
 export default HomePage

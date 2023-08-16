@@ -1,10 +1,10 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { MovieItem } from './MoviesItem';
-
+import css from './moviesList.module.css'
 export const MovieList = ({ movies }) => {
     return (
-        <ul>
+        <ul className={css.movielist}>
             {movies.map(movie => {
                 return (<MovieItem movie={movie} key={movie.id} />)
             })}

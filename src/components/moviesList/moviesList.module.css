@@ -1,0 +1,67 @@
+.movielist{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+li {
+    width: fit-content;
+}
+.movieCard {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 485px;
+  font-family: inherit;
+  transition: box-shadow 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.movieCard:hover{
+    box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6);
+    
+}
+.moviePoster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.2s ease-in-out;
+  
+  
+}
+
+.movieCard:hover .moviePoster {
+  transform: scale(1.1);
+}
+
+.movieDetails {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    height: 88px;
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10px; */
+  justify-content: center;
+ 
+}
+
+.movieTitle {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.movieYearGenres {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #888;
+}
