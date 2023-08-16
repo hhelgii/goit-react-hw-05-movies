@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './form.module.css'
 import propTypes from 'prop-types';
 export const Form=({onSubmit})=>{
     const handleSubmit=e=>{
@@ -8,9 +9,9 @@ export const Form=({onSubmit})=>{
         e.target.reset()
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <input name="searchInput" type="text"></input>
-            <button type='submit'>search</button>
+        <form onSubmit={handleSubmit} className={css.form}>
+            <input name="searchInput" type="text" placeholder='Input a movie name' className={css.formInput}></input>
+            <button type='submit' className={css.formButton}>Search!</button>
         </form>
     )
 }

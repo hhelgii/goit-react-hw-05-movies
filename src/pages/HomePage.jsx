@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MovieList from "components/moviesList/MoviesList";
 import { getTrending } from "services/api";
-import css from './homePage.module.css'
+import css from './homeAndMoviesPage.module.css'
 const HomePage=()=>{
     const [trendyMovies, setTrendyMovies]=useState([])
    

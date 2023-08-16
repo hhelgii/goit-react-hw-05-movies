@@ -1,0 +1,49 @@
+/* form.module.css */
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.formInput {
+  padding: 8px;
+  height: 30px;
+  width: 300px;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+  color: #9b5ee4;
+  font-family: inherit;
+}
+.formInput:hover,
+.formInput:focus {
+    box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6);
+}
+.formButton {
+  padding: 8px 16px;
+  background-color: #7228cd; /* Фіолетовий колір кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: inherit;
+}
+
+.formButton:hover {
+ /* Темніший відтінок при наведенні */
+ box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6);
+}

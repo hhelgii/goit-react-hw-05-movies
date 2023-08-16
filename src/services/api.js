@@ -43,7 +43,7 @@ export async function getGenres() {
   if (!genres) {
     try {
       genres = await getGenresData();
-      console.log(genres);
+      
       localStorage.setItem(GENRES_KEY, JSON.stringify(genres));
     } catch (error) {
       console.log(error.message)

@@ -1,0 +1,64 @@
+/* movieDetails.module.css */
+* {
+  box-sizing: border-box;
+}
+.movieDetailsPage {
+  padding: 20px 40px;
+}
+.movieDetails {
+  display: flex;
+  padding: 16px;
+  background-color: #170231;
+  /* змінити колір */
+  color: #dcc8f3;
+  border-radius: 8px;
+  font-size: 17px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info {
+  min-height: 495px;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-right: 16px;
+  justify-content: center;
+  border-radius: 8px;
+  width: 400px;
+  /* box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6); */
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  width: 150px;
+}
+
+.value {
+  width: 300px;
+  font-weight: normal;
+}
+
+.backdrop {
+  /* make light frame */
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.backdrop:hover{
+  box-shadow: 0px 0px 20px 10px rgba(114, 40, 205, 0.6);
+}
+.backdropImg {
+  height: 495px;
+}

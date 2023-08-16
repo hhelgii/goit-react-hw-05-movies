@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getSearchMovie } from 'services/api';
 import { Form } from 'components/form/Form';
 import MovieList from 'components/moviesList/MoviesList';
+import css from './homeAndMoviesPage.module.css'
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,13 +21,14 @@ const MoviesPage = () => {
       setMovies(res.results);
     })();
   }, [query]);
-    return (
-        <>
-        <h1>Found Movies</h1>
-        <Form onSubmit={setNewQuery}/>
-        {movies&&<MovieList movies={movies}/>}
-        {query && movies.length === 0 && <p>Nothig Found</p>}
-        </>
-    )
+  return (
+    <div className={css.moviesPage}>
+      <h1 className={css.title}>Found Movies</h1>
+      <Form onSubmit={setNewQuery} />
+
+      {movies && <MovieList movies={movies} />}
+      {query && movies.length === 0 && <p>Nothig Found</p>}
+    </div>
+  );
 };
-export default MoviesPage
+export default MoviesPage;
