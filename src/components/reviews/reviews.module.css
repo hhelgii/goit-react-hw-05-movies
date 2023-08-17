@@ -1,0 +1,62 @@
+.reviewsList {
+  
+  padding: 30px;
+}
+.reviewItem {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #9f79cb;
+  line-height: 1.6;
+}
+.rewievItemAuthor {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #dcc8f3;
+}
+.rewievItemContent {
+  height: 100px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #9f79cb #160126;
+}
+.rewievItemContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rewievItemContent::-webkit-scrollbar-thumb {
+  background-color: #9f79cb;
+  border-radius: 3px;
+}
+
+.rewievItemContent::-webkit-scrollbar-track {
+  background-color: #160126;
+}
+.message {
+  text-align: center;
+  color: #dcc8f3;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 900px) {
+    .reviewsList{
+        padding: 20px;
+    }
+  .reviewItem {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+  .rewievItemAuthor {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reviewItem {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+  .rewievItemAuthor {
+    font-size: 14px;
+  }
+  .message{
+    font-size: 14px;
+  }
+}

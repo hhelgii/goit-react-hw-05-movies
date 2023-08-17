@@ -1,4 +1,3 @@
-/* movieDetails.module.css */
 * {
   box-sizing: border-box;
 }
@@ -7,9 +6,6 @@
 }
 .movieDetails {
   display: flex;
-  padding: 16px;
-  background-color: #170231;
-  /* змінити колір */
   color: #dcc8f3;
   border-radius: 8px;
   font-size: 17px;
@@ -19,12 +15,11 @@
 
 .info {
   min-height: 495px;
-
-  padding: 20px;
+  /* padding: 20px 16px 0 20px; */
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-right: 16px;
+  /* padding-right: 16px; */
   justify-content: center;
   border-radius: 8px;
   width: 400px;
@@ -56,9 +51,121 @@
   box-shadow: 0px 0px 15px 5px rgba(114, 40, 205, 0.6);
   transition: box-shadow 0.2s ease-in-out;
 }
-.backdrop:hover{
+.backdrop:hover {
   box-shadow: 0px 0px 20px 10px rgba(114, 40, 205, 0.6);
 }
 .backdropImg {
   height: 495px;
+}
+.goBackButton,
+.castButton,
+.reviewsButton {
+  text-decoration: none;
+  color: #dcc8f3;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.goBackButton:hover,
+.castButton:hover,
+.reviewsButton:hover {
+  box-shadow: 0px 0px 5px 3px rgba(114, 40, 205, 0.6);
+}
+.moreInfo {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .movieDetails {
+    font-size: 13px;
+  }
+  .info {
+    min-height: 430px;
+    gap: 20px;
+    width: 350px;
+  }
+
+  .backdropImg {
+    height: 430px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .info {
+    min-height: 400px;
+    gap: 16px;
+    width: 320px;
+  }
+
+  .backdropImg {
+    height: 380px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .movieDetailsPage {
+    padding: 15px 20px;
+  }
+
+  .info {
+    min-height: 350px;
+    gap: 12px;
+    width: 280px;
+  }
+
+  .backdropImg {
+    height: 320px;
+  }
+  .goBackButton,
+  .castButton,
+  .reviewsButton {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 920px) {
+  .movieDetailsPage {
+    padding: 10px 10px;
+  }
+  .movieDetails {
+    font-size: 10px;
+  }
+  .info {
+    min-height: 280px;
+    gap: 9px;
+    width: 280px;
+    /* padding: 10px; */
+  }
+
+  .backdropImg {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .movieDetails {
+    flex-direction: column-reverse;
+    max-width: 533px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 16px;
+  }
+  .backdropImg {
+    width: 100%;
+    height: auto;
+  }
+  .info {
+    gap: 12px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .goBackButton,
+.castButton,
+.reviewsButton{
+  font-size: 0.8rem;
+}
+}
+@media screen and (max-width: 560px) {
+  .info {
+    font-size: 10px;
+    min-height: auto;
+  }
 }

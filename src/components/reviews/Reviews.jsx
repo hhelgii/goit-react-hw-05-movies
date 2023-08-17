@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import { getMovieInfoWithParams } from 'services/api';
+import css from './reviews.module.css'
 const Reviews = ({ movieId }) => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
@@ -11,21 +12,22 @@ const Reviews = ({ movieId }) => {
     };
     fetReviews()
   }, [movieId]);
+  console.log(reviews)
   return (
     reviews && (
       <>
-        <ul>
+        <ul className={css.reviewsList}>
             {reviews.map(({ id, author, content  }) => {
               return (
-                <li key={id}>
-                  <h4>{author}</h4>
-                  <p>{content}</p>
+                <li key={id} className={css.reviewItem}>
+                  <h4 className={css.rewievItemAuthor}>{author}</h4>
+                  <p className={css.rewievItemContent}>{content}</p>
 
                 </li>
               );
             })}
         </ul>
-        {reviews.length === 0 && <p>We don't have reviews for this movie</p>}
+        {reviews.length === 0 && <p className={css.message}>We don't have reviews for this movie</p>}
       </>
     )
   );

@@ -2,8 +2,10 @@
 .moviesPage {
   display: flex;
   flex-direction: column;
-
+height: 100%;
   padding: 20px 10px;
+ 
+  
 }
 .title {
   margin: 0 auto;

@@ -1,0 +1,81 @@
+.castList {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  justify-content: center;
+}
+.castMember {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  max-width: 200px;
+  min-width: 150px;
+}
+.castMemberImgWrap {
+  width: 150px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.castMemberInfo {
+  color: #dcc8f3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+}
+
+.castMemberCharacter {
+  font-size: 10px;
+}
+.message{
+  text-align: center;
+  color: #dcc8f3;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  
+  .message{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 624px) {
+  .castList {
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .castMemberInfo {
+    font-size: 10px;
+  }
+  .castMemberCharacter {
+    font-size: 8px;
+  }
+  .castMember {
+    max-width: 135px;
+    min-width: 113px;
+  }
+  .castMemberImgWrap {
+    width: 113px;
+    height: 135px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .castList {
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .castMember {
+    max-width: 110px;
+    min-width: 90px;
+  }
+
+  .castMemberImgWrap {
+    width: 90px;
+    height: 110px;
+  }
+}
+

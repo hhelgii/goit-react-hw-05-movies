@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Route, Routes, useLocation, useParams, Link } from 'react-router-dom';
 import { Loader } from 'components/loader/Loader';
 import { getMovieInfo } from 'services/api';
-
+import defaultImg from '../img/defaultbackdropImg.png';
 import css from './movieDetails.module.css';
 const Cast = lazy(() => import('../components/cast/Cast'));
 const Reviews = lazy(() => import('../components/reviews/Reviews'));
@@ -32,7 +32,9 @@ const MovieDetails = () => {
   return (
     movie && (
       <div className={css.movieDetailsPage}>
-        <Link to={backLinkHref.current}>Go back</Link>
+        <Link to={backLinkHref.current} className={css.goBackButton}>
+          Go back
+        </Link>
 
         <div className={css.movieDetails}>
           <div className={css.info}>
@@ -72,16 +74,24 @@ const MovieDetails = () => {
 
           <div className={css.backdrop}>
             <img
-              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              src={
+                movie.backdrop_path
+                  ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
+                  : `${defaultImg}`
+              }
               alt="Backdrop"
               className={css.backdropImg}
             />
           </div>
         </div>
 
-        <div>
-          <Link to={`cast`}>Cast</Link>
-          <Link to={`reviews`}>Reviews</Link>
+        <div className={css.moreInfo}>
+          <Link to={`cast`} className={css.castButton}>
+            Cast
+          </Link>
+          <Link to={`reviews`} className={css.reviewsButton}>
+            Reviews
+          </Link>
 
           <Suspense fallback={<Loader />}>
             <Routes>

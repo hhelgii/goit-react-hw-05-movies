@@ -6,6 +6,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #170231;
+  scrollbar-width: thin;
+  scrollbar-color: #9f79cb #160126;
+  
+  /* height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(18, 3, 33, 1) 0%,
+    rgba(23, 2, 49, 1) 50%,
+    rgba(40, 4, 85, 1) 100%
+  );
+  background-repeat: no-repeat; */
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #9f79cb;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #160126;
 }
 /* 12011c */
 /* 170231 */
@@ -20,28 +43,28 @@ h3,
 h4,
 h5,
 h6 {
-	margin-block: 0;
+  margin-block: 0;
 }
 
 img {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 p {
-	margin-block: 0;
+  margin-block: 0;
 }
 
 ul {
-	margin-block: 0;
-	padding-left: 0;
+  margin-block: 0;
+  padding-left: 0;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
